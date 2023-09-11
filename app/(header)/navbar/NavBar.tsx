@@ -1,17 +1,18 @@
 import Image from 'next/image';
+import Link from 'next/link'
 import Logo from './images/OW.png';
 
 function NavBar() {
   return (
-    <header className='px-6 pt-6 flex items-center justify-between'>
+    <header className='px-6 pt-6 pb-2 flex items-center justify-between border-b-2  border-solid'>
       <Image src={Logo} width={200} alt='site logo' placeholder='blur' />
-      <nav >
+      <nav>
         <ul className='flex gap-4'>
           <li>
-            <button>Login</button>
+            <Link href='/login'>Login</Link>
           </li>
           <li>
-            <button>Sign Up</button>
+            <Link href='/signup'>Sign Up</Link>
           </li>
         </ul>
       </nav>
