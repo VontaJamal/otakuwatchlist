@@ -1,11 +1,13 @@
 import Image from 'next/image';
-import Link from 'next/link'
+import Link from 'next/link';
 import Logo from './images/OW.png';
 
 function NavBar() {
   return (
     <header className='px-6 pt-6 pb-2 flex items-center justify-between border-b-2  border-solid'>
-      <Image src={Logo} width={200} alt='site logo' placeholder='blur' />
+      <Link href='/'>
+        <Image src={Logo} width={200} alt='site logo' placeholder='blur' />
+      </Link>
       <nav>
         <ul className='flex gap-4'>
           <li>
